@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+/*________________________________________________ Main CSS for entire body tag */
+
+body{
+
+    background-image: url("../images/background.jpg");
+    color: white;
+    font-family: 'Acme', sans-serif; ;
+}
