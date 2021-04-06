@@ -4,7 +4,166 @@
 
 body{
 
-    background-image: url("../images/background.jpg");
+    background-image: url(../images/background.jpg);
+    background-blend-mode: overlay;
     color: white;
-    font-family: 'Acme', sans-serif; ;
+    font-family: 'Acme', sans-serif; 
+    overflow: hidden;
+    
+}
+
+.title-img {
+    width: 33%;
+    height: 115%; 
+}
+/*_______________________________________________________________________Header__*/
+body header {
+  height: 10vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+body header .timer {
+  position: absolute;
+  top: 14%;
+  left: 88%;
+  font-size: 25px ;
+  background: black;
+  width: 57.6px;
+  height: 57.6px;
+  line-height: 57.6px;
+  border-radius: 28.8px;
+  text-align: center;
+}
+
+/*_______________________________________________________________________Main Game, Flip Card effect__*/
+
+.game {
+
+    height: 648px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+  height: 22%;
+  margin: 1%;
+  cursor: pointer;
+}
+
+.flip-container.flip .flipper {
+   
+   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg) ;
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+
+}
+
+.flip-container, .front, .back{
+    width: 23%;
+    float: left;
+    border-radius: 0.90rem;
+  
+}
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100%;
+  position: relative;
+}
+.flipper .front, .flipper .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -ms-backface-visibility: visible;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  box-shadow: #FFCCA9 0 8px 2px;
+}
+.flipper .front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  background: orange;
+}
+.flipper .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/*_______________________________________________________________________Card choices (images) ___*/
+
+#Gamakichi {
+  background: white url("../images/Gamakichi.jpg") no-repeat center;
+  background-size: contain;
+}
+#Konoha {
+  background: white url("../images/Konoha.jpg") no-repeat center;
+  background-size: contain;
+}
+#Ramen {
+  background: white url("../images/Ramen.jpg") no-repeat center;
+  background-size: contain;
+}
+#Seal {
+  background: white url("../images/Seal.jpg") no-repeat center;
+  background-size: contain;
+}
+#Sharingan {
+  background: white url("../images/Sharingan.jpg") no-repeat center;
+  background-size: contain;
+}
+#Smile {
+  background: white url("../images/Smile.jpg") no-repeat center;
+  background-size: contain;
+}
+#Uchiha {
+  background: white url("../images/Uchiha.jpg") no-repeat center;
+  background-size: contain;
+}
+#Sasuke {
+  background: white url("../images/Sasuke.jpg") no-repeat center;
+  background-size: contain;
+}
+
+
+/*_______________________________________________________________________Media Queries___*/
+
+
+@media screen and (min-width: 37.4375em) {
+  body header {
+    width: 600px;
+  }
+}
+
+
+
+
+/* Game media query*/
+
+@media screen and (min-width: 37.4375em) {
+  .game {
+    width: 600px;
+  }
 }
