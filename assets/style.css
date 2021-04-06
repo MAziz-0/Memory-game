@@ -2,7 +2,7 @@
 
 /*_______________________________________________________________________Body Styling___*/
 
-body{
+body {
 
   background-image: url("../images/background.jpg");  
   background-position: center center;
@@ -29,7 +29,7 @@ body header .timer {
   text-align: center;
 }
 
-/*_______________________________________________________________________Main Game__*/
+/*_______________________________________________________________________Main Game, Flip Card effect__*/
 
 .game {
 
@@ -46,6 +46,64 @@ body header .timer {
   height: 22%;
   margin: 1%;
   cursor: pointer;
+}
+
+.flip-container.flip .flipper {
+   
+   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg) ;
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+
+}
+
+.flip-container, .front, .back{
+    width: 23%;
+    float: left;
+    border-radius: 0.75rem;
+  
+}
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100%;
+  position: relative;
+}
+.flipper .front, .flipper .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -ms-backface-visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-shadow: #FFCCA9 0 8px 2px;
+}
+.flipper .front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  background: #FF2151;
+}
+.flipper .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  border: 1px solid #E8E8E8;
+}
 /*_______________________________________________________________________Media Queries___*/
 
 
@@ -80,5 +138,4 @@ body header .timer {
   .game {
     width: 600px;
   }
-}
 }
