@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+/*_______________________________________________________________________Body Styling___*/
+
+body{
+    background-image: url("./assets/images/background.jpg");
+    color: white;
+    font-family: 'Acme', sans-serif;
+}
