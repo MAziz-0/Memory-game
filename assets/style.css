@@ -3,7 +3,82 @@
 /*_______________________________________________________________________Body Styling___*/
 
 body{
-    background-image: url("./assets/images/background.jpg");
-    color: white;
-    font-family: 'Acme', sans-serif;
+
+  background-image: url("../images/background.jpg");  
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  color: white;
+  font-family: 'Acme', sans-serif;
+    
+}
+
+/*_______________________________________________________________________Header__*/
+
+body header .timer {
+  position: absolute;
+  top: 14%;
+  left: 3%;
+  font-size: 25px ;
+  background: #da8441;
+  width: 57.6px;
+  height: 57.6px;
+  line-height: 57.6px;
+  border-radius: 28.8px;
+  text-align: center;
+}
+
+/*_______________________________________________________________________Main Game__*/
+
+.game {
+
+    height: 648px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+  height: 22%;
+  margin: 1%;
+  cursor: pointer;
+/*_______________________________________________________________________Media Queries___*/
+
+
+@media screen and (min-width: 37.4375em) {
+  body header {
+    width: 600px;
+  }
+}
+
+/* Main body query*/
+@media only screen and (max-width: 480px) {
+    body {
+        background-image: url("../images/background.jpg");
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    body {
+        background-image: url("../images/background.jpg");
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    body {
+	    background-image: url("../images/background.jpg");
+   }
+}
+
+/* Game media query*/
+
+@media screen and (min-width: 37.4375em) {
+  .game {
+    width: 600px;
+  }
+}
 }
