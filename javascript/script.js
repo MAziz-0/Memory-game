@@ -21,3 +21,11 @@ var timeGiven = 30;
 var timeOut = false;
 var victoryRoyale = false;
 
+shuffleCards(cardPair)
+
+  $('.back').each(function(i, element)) // JQery used to loop through all elements //
+    $(this).attr('id', cardPair[i]); // .attr() gets and sets attribute - in this case the ID //
+
+    });
+
+    
