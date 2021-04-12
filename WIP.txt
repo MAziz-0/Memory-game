@@ -1,155 +1,159 @@
 if (document.location.search.match(/type=embed/gi)) {
-  window.parenmt.postMessage("resize", "*");
+    window.parent.postMessage("resize", "*");
 }
 
 /* ____________________________Responsiveness on Safari/Chrome */
 var $;
 
 $(document).ready(function () {
-  if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-    $(".game").height($(window).height() * 0.9);
-  }
+    if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+        $(".game").height($(window).height() * 0.9);
+    }
 
-  /* ___________________________ Variable assignment */
+    /* ___________________________ Variable assignment */
 
-  var cards = ["Gamakichi", "Konoha", "Ramen", "Seal", "Sharingan", "Smile", "Uchiha", "Sasuke"];
-  var cardPair = cards.concat(cards);
-  var cardSelect = [];
-  var flipCards = [];
-  var pairCount = 0;
-  var startGame = false;
-  var playing = false;
-  var timeGiven = 30;
-  var timeOut = false;
-  var victoryRoyale = false;
-  var startTimer = false;
+    var cards = ["Gamakichi", "Konoha", "Ramen", "Seal", "Sharingan", "Smile", "Uchiha", "Sasuke"];
+    var cardPair = cards.concat(cards);
+    var cardSelect = [];
+    var flipCards = [];
+    var pairCount = 0;
+    var startGame = false;
+    var playing = false;
+    var timeGiven = 30;
+    var timeOut = false;
+    var victoryRoyale = false;
+    var startTimer = false;
 
-  shuffleArray(cardPair); //shuffle cards
+    shuffleArray(cardPair); //shuffle cards
 
-  $(".back").each(function (i, _element) {
-    $(this).attr("id", cardPair[i]); //sets id in DOM for cards, access styles via css
-  });
+    $(".back").each(function (i, _element) {
+        $(this).attr("id", cardPair[i]); //sets id in DOM for cards, access styles via css
+    });
 
-  $(".flip-container").click(function () {
-    if (!timeOut) {
-      if (!startGame && !playing) {
-        //before the game starts, show all cards to the user and flip back
+    $(".flip-container").click(function () {
+        if (!timeOut) {
+            if (!startGame && !playing) {
+                //before the game starts, show all cards to the user and flip back
 
-        playing = true;
+                playing = true;
 
-        $(".flip-container").each(function () {
-          $(this).toggleClass("flip");
-        });
+                $(".flip-container").each(function () {
+                    $(this).toggleClass("flip");
+                });
 
-        setTimeout(function () {
-          $(".flip-container").each(function () {
-            $(this).toggleClass("flip");
-          });
+                setTimeout(function () {
+                    $(".flip-container").each(function () {
+                        $(this).toggleClass("flip");
+                    });
 
-          startGame = true;
-          playing = false;
-        }, 2000);
-      } else if ($(this).find(".back").attr("id") == cardSelect[0] && cardSelect[1] == null && $(this).hasClass("flip") && !playing) {
-        playing = true;
+                    startGame = true;
+                    playing = false;
+                }, 2000);
+            } else if ($(this).find(".back").attr("id") == cardSelect[0] && cardSelect[1] == null && $(this).hasClass("flip") && !playing) {
+                playing = true;
+                console.log(cardSelect);
+                    console.log(cardSelect[1]);
+                cardSelect[0] = null; //if one card has been chosen and then clicked again, flip back over
+                $(this).toggleClass("flip");
 
-        cardSelect[0] = null; //if one card has been chosen and then clicked again, flip back over
-        $(this).toggleClass("flip");
+                playing = false;
+            } else if ($(this).hasClass("flip")) {
+                console.log(cardSelect);
+                return; //if the card clicked is already flipped, return
+            } else if (cardSelect[0] == null && cardSelect[1] == null && !$(this).hasClass("flip") && !playing) {
+                if (!startTimer) {
+                    countdown();
+                }
 
-        playing = false;
-      } else if ($(this).hasClass("flip")) {
-        return; //if the card clicked is already flipped, return
-      } else if (cardSelect[0] == null && cardSelect[1] == null && !$(this).hasClass("flip") && !playing) {
-        if (!startTimer) {
-          countdown();
-        }
+                playing = true;
 
-        playing = true;
+                $(this).toggleClass("flip");
 
-        $(this).toggleClass("flip");
+                playing = false;
+            } else if (cardSelect[0] != null && cardSelect[1] == null && !$(this).hasClass("flip") && !playing) {
+                playing = true;
 
-        playing = false;
-      } else if (cardSelect[0] != null && cardSelect[1] == null && !$(this).hasClass("flip") && !playing) {
-        playing = true;
+                cardSelect[1] = $(this).find(".back").attr("id"); //if no second card has been flipped, store the chosen card's brand in cardSelect[1] and flip it
+                $(this).toggleClass("flip");
 
-        cardSelect[1] = $(this).find(".back").attr("id"); //if no second card has been flipped, store the chosen card's brand in cardSelect[1] and flip it
-        $(this).toggleClass("flip");
+                if (cardSelect[0] == cardSelect[1]) {
+                    cardSelect[0] = null;
+                    cardSelect[1] = null;
+                    console.log(cardSelect[0]);
+                    console.log(cardSelect[1]);
+                    pairCount++;
 
-        if (cardSelect[0] == cardSelect[1]) {
-          cardSelect[0] = null;
-          cardSelect[1] = null;
+                    if (pairCount == cards.length) {
+                        victoryRoyale = true;
+                        alert("You have defeated Itachi and restored your memories!");
+                    }
 
-          pairCount++;
+                    playing = false;
+                } else {
+                    //if the brands did not match - empty the cardSelect & flip the cards back over
 
-          if (pairCount == cards.length) {
-            victoryRoyale = true;
-            alert("Victory Royale! YOU WIN!!!!!!");
-          }
+                    flipCards[0] = cardSelect[0];
+                    flipCards[1] = cardSelect[1];
 
-          playing = false;
+                    cardSelect[0] = null;
+                    cardSelect[1] = null;
+                    console.log(flipCards[0]);
+                    console.log(flipCards[1]);
+                    setTimeout(function () {
+                        //flip back the selected cards that did not match
+
+                        $("*[id*=" + flipCards[0] + "]").each(function () {
+                            $(this).closest(".flip").toggleClass("flip");
+                        });
+                        $("*[id*=" + flipCards[1] + "]").each(function () {
+                            $(this).closest(".flip").toggleClass("flip");
+                        });
+
+                        playing = false;
+                    }, 800);
+                }
+            }
         } else {
-          //if the brands did not match - empty the cardSelect & flip the cards back over
-
-          flipCards[0] = cardSelect[0];
-          flipCards[1] = cardSelect[1];
-
-          cardSelect[0] = null;
-          cardSelect[1] = null;
-
-          setTimeout(function () {
-            //flip back the selected cards that did not match
-
-            $("*[id*=" + flipCards[0] + "]").each(function () {
-              $(this).closest(".flip").toggleClass("flip");
-            });
-            $("*[id*=" + flipCards[1] + "]").each(function () {
-              $(this).closest(".flip").toggleClass("flip");
-            });
-
-            playing = false;
-          }, 800);
+            alert("You have run out of time!");
         }
-      }
-    } else {
-      alert("You have run out of time!");
+    }); //Flip Container Click End
+
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var x = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[x];
+            array[x] = temp;
+        }
+        return array;
     }
-  }); //Flip Container Click End
 
-  function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-      var x = Math.floor(Math.random() * (i + 1));
-      var temp = array[i];
-      array[i] = array[x];
-      array[x] = temp;
+    function countdown() {
+        startTimer = true;
+
+        var timeStart = +new Date();
+        var timer = setInterval(function () {
+            var timeNow = +new Date();
+            var startDiff = (timeNow - timeStart) / 1000; //calculates time difference if game isn't in focus
+
+            if (timeGiven > 0 && !victoryRoyale) {
+                // if there is still time left and game isn't won, deduct time
+
+                timeGiven = 30;
+                timeGiven = Math.floor(timeGiven - startDiff);
+                $(".timer").text(timeGiven);
+            } else if (victoryRoyale) {
+                //stop timer when game is won
+
+                clearInterval(timer);
+            } else {
+                //stop timer when time is run out
+
+                timeOut = true;
+                alert("You have run out of time!");
+
+                clearInterval(timer);
+            }
+        }, 250);
     }
-    return array;
-  }
-
-  function countdown() {
-    startTimer = true;
-
-    var timeStart = +new Date();
-    var timer = setInterval(function () {
-      var timeNow = +new Date();
-      var startDiff = (timeNow - timeStart) / 1000; //calculates time difference if game isn't in focus
-
-      if (timeGiven > 0 && !victoryRoyale) {
-        // if there is still time left and game isn't won, deduct time
-
-        timeGiven = 30;
-        timeGiven = Math.floor(timeGiven - startDiff);
-        $(".timer").text(timeGiven);
-      } else if (victoryRoyale) {
-        //stop timer when game is won
-
-        clearInterval(timer);
-      } else {
-        //stop timer when time is run out
-
-        timeOut = true;
-        alert("You have run out of time!");
-
-        clearInterval(timer);
-      }
-    }, 250);
-  }
 }); //Document Ready End
