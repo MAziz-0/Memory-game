@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-
+@font-face {
+  font-family: acme;
+  src: url(../../Acme/Acme-Regular.ttf);
+}
 /*________________________________________________ Main CSS for entire body tag */
 
 
 
 /*________________________________________________ Splash screen */
+
+.hidden {
+    display: none;
+}
 
 .splash {
     z-index: 200;
@@ -49,17 +55,16 @@
     animation: fadeIn 1s ease-in forwards;
 }
 
-
-
-
 body{
+    color: white;
+    overflow: hidden;
+    font-family: 'Acme', sans-serif; 
+}
 
+.background {
     background-image: url(../images/background.jpg);
     background-blend-mode: overlay;
-    color: white;
-    font-family: 'Acme', sans-serif; 
-    overflow: hidden;
-    
+    background-repeat: round;
 }
 
 .title-img {
@@ -208,6 +213,12 @@ body header .timer {
   }
 }
 
+@media screen and (max-width: 37.4375em) {
+  .background {
+      background-image: none;
+      background-color: black;
+  }
+}
 
 
 
