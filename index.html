@@ -9,11 +9,12 @@
     <title>Naruto Memory Game</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 </head>
 <header class="title-container hidden">
-    <img src="assets/images/title.png" alt="" class="title-img">
-    <a class="name"><img src="https://fontmeme.com/permalink/210408/214d8c245963731061a667ea2362b113.png"
+    <img onclick="window.location.reload();" src="assets/images/title.png" alt="" class="title-img">
+    <a class="name"><img onclick="window.location.reload();" src="https://fontmeme.com/permalink/210408/214d8c245963731061a667ea2362b113.png"
             alt="naruto-font" border="0" style="height: 65%; margin-bottom: 16px;"></a>
 </header>
 <!-- Game Timer -->
@@ -22,8 +23,11 @@
 </header>
 
 <body class="game-body">
-    <div class="splash">
-        <h1 class="fade-in">Naruto Memory Game!</h1>
+    <div class="splash" >
+        <audio controls autoplay loop hidden>
+        <source src="../assets/audio/Senya.mp3" type="audio/mpeg">
+        </audio>
+        <h1 class="fade-in">Naruto Memory Game!</h1> 
     </div>
     <!-- Main Game -->
     <div class="game hidden">
@@ -130,6 +134,8 @@
 <script
     src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
 <script src="../javascript/splash.js"></script>
 <script src="../javascript/main.js"></script>
 <script> window.console = window.console || function (t) { };</script>
