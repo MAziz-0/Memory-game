@@ -64,7 +64,7 @@ $(document).ready(function () {
                 if (!startTimer) {
                     countdown();
                 }
-
+                cardSelect[0] = $(this).find(".back").attr("id");
                 playing = true;
 
                 $(this).toggleClass("flip");
@@ -85,7 +85,24 @@ $(document).ready(function () {
 
                     if (pairCount == cards.length) {
                         victoryRoyale = true;
-                        alert("You have defeated Itachi and restored your memories!");
+                    
+                    Swal.fire({
+                    buttons: ["Restart Game" ],
+                    title: "Sweet!",
+                    text: 'You have released the Genjustu... your memories have been restored...',
+                    imageUrl: '../assets/images/victory.gif',
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: 'Custom image',
+                    showClass: {
+                     popup: 'animate__animated animate__fadeInDown'
+              },
+                    hideClass: {
+                     popup: 'animate__animated animate__fadeOutUp'
+                }
+                
+              });
+
                     }
 
                     playing = false;
@@ -114,7 +131,22 @@ $(document).ready(function () {
                 }
             }
         } else {
-            alert("You have run out of time!");
+            Swal.fire({
+                    buttons: ["Restart Game"],
+                    title: "You are out of time... Your mind has been consumed by Itachi...",
+                    text: 'Try again',
+                    background: "Black",
+                    imageUrl: '../assets/images/loss.gif',
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: 'Custom image',
+                    showClass: {
+                     popup: 'animate__animated animate__fadeInDown'
+              },
+                    hideClass: {
+                     popup: 'animate__animated animate__fadeOutUp'
+                }
+              });
         }
     }); //Flip Container Click End
 
@@ -150,10 +182,22 @@ $(document).ready(function () {
                 //stop timer when time is run out
 
                 timeOut = true;
-                alert("You have run out of time!");
+                Swal.fire({
+                buttons: ["Restart Game"],
+                title: "You are out of time... Your mind has been consumed by Itachi...",
+                background: "Black",
+                text: 'Try again',
+                imageUrl: '../assets/images/loss.gif',
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: 'Custom image',
+                showClass: {
+                popup: 'animate__animated animate__fadeInDown'
 
-                clearInterval(timer);
+                
+                }
+                });clearInterval(timer);
             }
         }, 250);
     }
-}); //Document Ready End
+});
