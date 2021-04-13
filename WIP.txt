@@ -132,9 +132,8 @@ $(document).ready(function () {
             }
         } else {
             Swal.fire({
-                    buttons: ["Restart Game"],
+                    buttons: ["Try Again"],
                     title: "You are out of time... Your mind has been consumed by Itachi...",
-                    text: 'Try again',
                     background: "Black",
                     imageUrl: '../assets/images/loss.gif',
                     imageWidth: 400,
@@ -142,10 +141,14 @@ $(document).ready(function () {
                     imageAlt: 'Custom image',
                     showClass: {
                      popup: 'animate__animated animate__fadeInDown'
-              },
+                    },
                     hideClass: {
                      popup: 'animate__animated animate__fadeOutUp'
-                }
+                    },
+                    willClose: () => {
+                        window.location.reload();
+                    },
+                     confirmButtonText: "Try Again"
               });
         }
     }); //Flip Container Click End
@@ -182,21 +185,26 @@ $(document).ready(function () {
                 //stop timer when time is run out
 
                 timeOut = true;
-                Swal.fire({
-                buttons: ["Restart Game"],
-                title: "You are out of time... Your mind has been consumed by Itachi...",
-                background: "Black",
-                text: 'Try again',
-                imageUrl: '../assets/images/loss.gif',
-                imageWidth: 400,
-                imageHeight: 200,
-                imageAlt: 'Custom image',
-                showClass: {
-                popup: 'animate__animated animate__fadeInDown'
-
-                
-                }
-                });clearInterval(timer);
+                 Swal.fire({
+                    buttons: ["Try Again"],
+                    title: "You are out of time... Your mind has been consumed by Itachi...",
+                    background: "Black",
+                    imageUrl: '../assets/images/loss.gif',
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: 'Custom image',
+                    showClass: {
+                     popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                     popup: 'animate__animated animate__fadeOutUp'
+                    },
+                    willClose: () => {
+                        window.location.reload();
+                    },
+                    confirmButtonText: "Try Again"
+              });
+              clearInterval(timer);
             }
         }, 250);
     }
