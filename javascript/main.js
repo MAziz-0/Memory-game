@@ -94,7 +94,7 @@ $(document).ready(function () {
                         victoryRoyale = true;
                     
                     Swal.fire({
-                    buttons: ["Restart Game" ],
+                    buttons: ["Play again" ],
                     title: "YATTAA!",
                     text: 'You have released the Genjustu... your memories have been restored...',
                     imageUrl: '../assets/images/victory.gif',
@@ -106,7 +106,11 @@ $(document).ready(function () {
               },
                     hideClass: {
                      popup: 'animate__animated animate__fadeOutUp'
-                }
+                    },
+                    willClose: () => {
+                        window.location.reload();
+                    },
+                     confirmButtonText: "Play again"
                 
               });
 
