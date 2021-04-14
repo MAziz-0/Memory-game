@@ -191,4 +191,30 @@ $(document).ready(function () {
 
                 clearInterval(timer);
             } else {
-                
+                //__________________________________Stop timer when time is run out
+
+                timeOut = true;
+                 Swal.fire({
+                    buttons: ["Try Again"],
+                    title: "You are out of time... Your mind has been consumed by Itachi...",
+                    background: "Black",
+                    imageUrl: '../assets/images/loss.gif',
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: 'Custom image',
+                    showClass: {
+                     popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                     popup: 'animate__animated animate__fadeOutUp'
+                    },
+                    willClose: () => {
+                        window.location.reload();
+                    },
+                    confirmButtonText: "Try Again"
+              });
+              clearInterval(timer);
+            }
+        }, 250);
+    }
+});
