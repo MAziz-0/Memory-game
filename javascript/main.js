@@ -24,4 +24,17 @@ $(document).ready(function () {
     var victoryRoyale = false;
     var startTimer = false;
 
-    
+    //_________________________Shuffle cards//
+
+    shuffleArray(cardPair); 
+
+    //________________Sets id in DOM for cards, access styles via css//
+
+    $(".back").each(function (i, _element) {
+        $(this).attr("id", cardPair[i]); 
+    });
+
+    $(".flip-container").click(function () {
+        if (!timeOut) {
+            if (!startGame && !playing) {
+                
