@@ -178,4 +178,17 @@ $(document).ready(function () {
             var timeNow = +new Date();
             var startDiff = (timeNow - timeStart) / 1000; 
             
-           
+            //__________________________________Calculates time difference if game isn't in focus
+
+            if (timeGiven > 0 && !victoryRoyale) {
+                //__________________________________If there is still time left and game isn't won, deduct time
+
+                timeGiven = 30;
+                timeGiven = Math.floor(timeGiven - startDiff);
+                $(".timer").text(timeGiven);
+            } else if (victoryRoyale) {
+                //__________________________________Stop timer when game is won
+
+                clearInterval(timer);
+            } else {
+                
