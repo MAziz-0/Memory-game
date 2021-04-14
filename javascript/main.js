@@ -109,3 +109,73 @@ $(document).ready(function () {
                 }
                 
               });
+
+                    }
+
+                    playing = false;
+                } else {
+                    //__________________________________if the brands did not match - empty the cardSelect & flip the cards back over
+
+                    flipCards[0] = cardSelect[0];
+                    flipCards[1] = cardSelect[1];
+
+                    cardSelect[0] = null;
+                    cardSelect[1] = null;
+                    console.log(flipCards[0]);
+                    console.log(flipCards[1]);
+                    setTimeout(function () {
+                        //__________________________________flip back the selected cards that did not match
+
+                        $("*[id*=" + flipCards[0] + "]").each(function () {
+                            $(this).closest(".flip").toggleClass("flip");
+                        });
+                        $("*[id*=" + flipCards[1] + "]").each(function () {
+                            $(this).closest(".flip").toggleClass("flip");
+                        });
+
+                        playing = false;
+                    }, 800);
+                }
+            }
+        } else { //__________________________________ Alerts using SweetAlerts Swal() //
+            Swal.fire({
+                    buttons: ["Try Again"],
+                    title: "You are out of time... Your mind has been consumed by Itachi...",
+                    background: "Black",
+                    imageUrl: '../assets/images/loss.gif',
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: 'Custom image',
+                    showClass: {
+                     popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                     popup: 'animate__animated animate__fadeOutUp'
+                    },
+                    willClose: () => {
+                        window.location.reload();
+                    },
+                     confirmButtonText: "Try Again"
+              });
+        }
+    }); //__________________________________ Flip Container Click End //
+
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var x = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[x];
+            array[x] = temp;
+        }
+        return array;
+    }
+
+    function countdown() {
+        startTimer = true;
+
+        var timeStart = +new Date();
+        var timer = setInterval(function () {
+            var timeNow = +new Date();
+            var startDiff = (timeNow - timeStart) / 1000; 
+            
+           
