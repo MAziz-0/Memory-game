@@ -80,7 +80,7 @@ $(document).ready(function () {
                 playing = true;
 
                 cardSelect[1] = $(this).find(".back").attr("id"); 
-                //__________________________________If a second card has not been flipped, store the chosen card's brand in cardSelect[1] and flip it //
+                //__________________________________If a second card has not been flipped, store the selected card's value in cardSelect[1] and flip it //
                 $(this).toggleClass("flip");
 
                 if (cardSelect[0] == cardSelect[1]) {
@@ -93,4 +93,19 @@ $(document).ready(function () {
                     if (pairCount == cards.length) {
                         victoryRoyale = true;
                     
-                    
+                    Swal.fire({
+                    buttons: ["Restart Game" ],
+                    title: "YATTAA!",
+                    text: 'You have released the Genjustu... your memories have been restored...',
+                    imageUrl: '../assets/images/victory.gif',
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: 'Custom image',
+                    showClass: {
+                     popup: 'animate__animated animate__fadeInDown'
+              },
+                    hideClass: {
+                     popup: 'animate__animated animate__fadeOutUp'
+                }
+                
+              });
