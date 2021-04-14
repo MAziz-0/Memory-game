@@ -24,11 +24,11 @@ $(document).ready(function () {
     var victoryRoyale = false;
     var startTimer = false;
 
-    //_________________________Shuffle cards //
+    //__________________________________Shuffle cards //
 
     shuffleArray(cardPair); 
 
-    //________________Sets id in DOM for cards, access styles via css //
+    //__________________________________Sets id in DOM for cards, access styles via css //
 
     $(".back").each(function (i, _element) {
         $(this).attr("id", cardPair[i]); 
@@ -37,7 +37,7 @@ $(document).ready(function () {
     $(".flip-container").click(function () {
         if (!timeOut) {
             if (!startGame && !playing) {
-                //____________________________First click on any card, shows all cards to the user and flips back //
+                //__________________________________First click on any card, shows all cards to the user and flips back //
 
                 playing = true;
 
@@ -58,14 +58,14 @@ $(document).ready(function () {
                 console.log(cardSelect);
                     console.log(cardSelect[1]);
                 cardSelect[0] = null; 
-                //____________________________If a card has been chosen and then clicked again, flip card back to original position //
+                //__________________________________If a card has been chosen and then clicked again, flip card back to original position //
                 $(this).toggleClass("flip");
 
                 playing = false;
             } else if ($(this).hasClass("flip")) {
                 console.log(cardSelect);
                 return; 
-                //__________________________________If the card clicked is already flipped, Return
+                //__________________________________If the card clicked is already flipped, Return //
             } else if (cardSelect[0] == null && cardSelect[1] == null && !$(this).hasClass("flip") && !playing) {
                 if (!startTimer) {
                     countdown();
@@ -80,4 +80,17 @@ $(document).ready(function () {
                 playing = true;
 
                 cardSelect[1] = $(this).find(".back").attr("id"); 
-                
+                //__________________________________If a second card has not been flipped, store the chosen card's brand in cardSelect[1] and flip it //
+                $(this).toggleClass("flip");
+
+                if (cardSelect[0] == cardSelect[1]) {
+                    cardSelect[0] = null;
+                    cardSelect[1] = null;
+                    console.log(cardSelect[0]);
+                    console.log(cardSelect[1]);
+                    pairCount++;
+
+                    if (pairCount == cards.length) {
+                        victoryRoyale = true;
+                    
+                    
