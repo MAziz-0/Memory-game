@@ -94,7 +94,6 @@ $(document).ready(function () {
                         victoryRoyale = true;
                     
                     Swal.fire({
-                    buttons: ["Play again" ],
                     title: "YATTAA!",
                     text: 'You have released the Genjustu... your memories have been restored...',
                     imageUrl: '../assets/images/victory.gif',
@@ -110,7 +109,13 @@ $(document).ready(function () {
                     willClose: () => {
                         window.location.reload();
                     },
-                     confirmButtonText: "Play again"
+                     confirmButtonText: "Play Again?",
+
+                     footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the Developer</a>'
+
+                     
+
+                     
                 
               });
 
@@ -159,7 +164,9 @@ $(document).ready(function () {
                     willClose: () => {
                         window.location.reload();
                     },
-                     confirmButtonText: "Try Again"
+                     confirmButtonText: "Try Again",
+
+                     footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the Developer</a>'
               });
         }
     }); //__________________________________ Flip Container Click End //
@@ -215,7 +222,9 @@ $(document).ready(function () {
                     willClose: () => {
                         window.location.reload();
                     },
-                    confirmButtonText: "Try Again"
+                    confirmButtonText: "Try Again",
+
+                    footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the Developer</a>'
               });
               clearInterval(timer);
             }
