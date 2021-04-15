@@ -111,7 +111,7 @@ $(document).ready(function () {
                     },
                      confirmButtonText: "Play Again?",
 
-                     footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the Developer</a>'
+                     footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the developer</a>'
 
                      
 
@@ -166,7 +166,7 @@ $(document).ready(function () {
                     },
                      confirmButtonText: "Try Again",
 
-                     footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the Developer</a>'
+                     footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the developer</a>'
               });
         }
     }); //__________________________________ Flip Container Click End //
@@ -224,7 +224,7 @@ $(document).ready(function () {
                     },
                     confirmButtonText: "Try Again",
 
-                    footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the Developer</a>'
+                    footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the developer</a>'
               });
               clearInterval(timer);
             }
