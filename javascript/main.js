@@ -79,7 +79,8 @@ $(document).ready(function () {
             } else if (cardSelect[0] != null && cardSelect[1] == null && !$(this).hasClass("flip") && !playing) {
                 playing = true;
 
-                cardSelect[1] = $(this).find(".back").attr("id"); 
+                cardSelect[1] = $(this).find(".back").attr("id");
+
                 //__________________________________If a second card has not been flipped, store the selected card's value in cardSelect[1] and flip it //
                 $(this).toggleClass("flip");
 
@@ -106,24 +107,20 @@ $(document).ready(function () {
                     hideClass: {
                      popup: 'animate__animated animate__fadeOutUp'
                     },
-                    willClose: () => {
-                        window.location.reload();
-                    },
                      confirmButtonText: "Play Again?",
 
                      footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the developer</a>'
-
-                     
-
-                     
-                
-              });
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.reload();
+                }
+                });
 
                     }
 
                     playing = false;
                 } else {
-                    //__________________________________if the brands did not match - empty the cardSelect & flip the cards back over
+                    //__________________________________If the brands did not match - empty the cardSelect & flip the cards back over
 
                     flipCards[0] = cardSelect[0];
                     flipCards[1] = cardSelect[1];
@@ -133,7 +130,7 @@ $(document).ready(function () {
                     console.log(flipCards[0]);
                     console.log(flipCards[1]);
                     setTimeout(function () {
-                        //__________________________________flip back the selected cards that did not match
+                        //__________________________________Flip back the selected cards that did not match
 
                         $("*[id*=" + flipCards[0] + "]").each(function () {
                             $(this).closest(".flip").toggleClass("flip");
@@ -161,13 +158,15 @@ $(document).ready(function () {
                     hideClass: {
                      popup: 'animate__animated animate__fadeOutUp'
                     },
-                    willClose: () => {
-                        window.location.reload();
-                    },
                      confirmButtonText: "Try Again",
 
                      footer: '<a href="https://maziz-0.github.io/My-Portfolio/">Learn more about the developer</a>'
-              });
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.reload();
+                }
+                });
+
         }
     }); //__________________________________ Flip Container Click End //
 
