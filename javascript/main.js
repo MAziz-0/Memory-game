@@ -2,7 +2,7 @@ if (document.location.search.match(/type=embed/gi)) {
     window.parent.postMessage("resize", "*");
 }
 
-/* ____________________________Responsiveness on Safari/Chrome */
+[/* ____________________________Responsiveness on Safari/Chrome */]
 var $;
 
 $(document).ready(function () {

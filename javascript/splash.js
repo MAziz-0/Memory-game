@@ -1,5 +1,5 @@
 
-/* ____________________________Presents Splashscreen*/
+/* ____________________________Presents tiu Splashscreen*/
 
 const splash = document.querySelector(".splash");
 const title = document.querySelector(".title-container");
