@@ -8,7 +8,7 @@ const game = document.querySelector(".game");
 const body = document.querySelector(".game-body");
 const countdown = document.querySelector(".timer");
 /* ____________________________Removes hidden classes from main game after set amount of time */
-document.addEventListener("DOMContentLoaded",(e)=>{
+document.addEventListener("DOMContentLoaded",(_e)=>{
     setTimeout(()=>{
       splash.classList.add("display-none");
       title.classList.remove("hidden");
@@ -16,6 +16,6 @@ document.addEventListener("DOMContentLoaded",(e)=>{
       game.classList.remove("hidden");
       body.classList.add("background");
       countdown.classList.remove("hidden");
-    }, 8000);
+    }, 15000);
 
 });
