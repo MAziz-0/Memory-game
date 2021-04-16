@@ -228,6 +228,18 @@ body header .timer {
   }
 }
 
+@media screen and (max-width: 37.4375em) {
+  .lore-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 37.4375em) {
+  .tutor {
+    font-size: 15px;
+  }
+}
+
 /* Game media query*/
 
 @media screen and (min-width: 37.4375em) {
