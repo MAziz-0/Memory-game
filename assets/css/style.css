@@ -112,9 +112,7 @@ body header .timer {
 }
 
 .flip-container {
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  perspective: 1000;
+  perspective: 1000px;
   height: 22%;
   margin: 1%;
   cursor: pointer;
