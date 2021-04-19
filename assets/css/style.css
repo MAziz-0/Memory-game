@@ -120,7 +120,6 @@ body header .timer {
 
 .flip-container.flip .flipper {
   transform: rotateY(180deg);
- 
 }
 
 .flip-container,
@@ -132,7 +131,6 @@ body header .timer {
 }
 
 .flipper {
-  
   transition: 0.6s;
   transform-style: preserve-3d;
   height: 100%;
