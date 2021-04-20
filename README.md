@@ -151,44 +151,40 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Further Testing
 
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
--   A large amount of testing was done to ensure that all pages were linking correctly.
--   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+-   The website was viewed on a variety of devices such as Desktop and Samsung Note 10 +
+-   A large amount of testing was done to ensure that the game is functional
+-   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues, all were content with the gaming experience.
 
 ### Known Bugs
 
--   On some mobile devices the Hero Image pushes the size of screen out more than any of the other content on the page.
-    -   A white gap can be seen to the right of the footer and navigation bar as a result.
--   On Microsoft Edge and Internet Explorer Browsers, all links in Navbar are pushed upwards when hovering over them.
-
-## Deployment
+-   On some mobile devices the title image does not fit correct and the cards are cut off if the screen size is too small.
+    -   If the screen is too small the "click to start" is pushed into the title image
+-   On Microsoft Edge and Internet Explorer Browsers and some phones the gif/webp does not work.
 
 ### GitHub Pages
 
-The project was deployed to GitHub Pages using the following steps...
+The project was deployed to GitHub Pages using the following steps.
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
+1. Log in to GitHub and locate the relevant Repository.
+2. At the top of the Repository (not top of page), find the "Settings" button on the menu.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
 4. Under "Source", click the dropdown called "None" and select "Master Branch".
 5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+6. Scroll back down through the page to locate the now published site in the "GitHub Pages" section.
 
 ### Forking the GitHub Repository
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+By forking the GitHub Repository, we make a copy of the original Repository on our GitHub account to view or make changes without affecting the original Repository by using the following steps.
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+1. Log in to GitHub and locate the relevant Repository.
+2. At the top of the Repository (not top of page), just above the "Settings" button on the menu, locate the "Fork" button.
+3. You should now have a copy of the original Repository in your GitHub account.
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+1. Log in to GitHub and locate the relevant Repository.
 2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+3. To clone the Repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
 5. Change the current working directory to the location where you want the cloned directory to be made.
 6. Type `git clone`, and then paste the URL you copied in Step 3.
@@ -208,13 +204,11 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 > Unpacking objects: 100% (10/10), done.
 ```
 
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
-
 ## Credits
 
 ### Code
 
--   The full-screen hero image code came from this [StackOverflow post](https://stackoverflow.com)
+-   The full-screen hero image code came from this [Wallpaperaccess](https://wallpaperaccess.com/uchiha-fan)
 
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
@@ -222,15 +216,23 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Content
 
--   All content was written by the developer.
+-   All text [content was written by the developer.
 
--   Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+-   All materials on this Site(Naruto), including, but not limited to characters, images, illustrations, audio clips, video clips, and compilations are protected by copyrights, trademarks, and other intellectual property rights which are owned and controlled by VIZ Media, LLC. and its affiliates (collectively, "VIZ Media, SHONEN JUMP, Shojo Beat")
+
 
 ### Media
 
--   All Images were created by the developer.
+-   The Full-screen background image came from this [Wallpaperaccess](https://wallpaperaccess.com/uchiha-fan)
+-   The Victory webp came from this [Tenor](https://tenor.com/view/happy-naruto-smile-gif-12599252)
+-   The Loss webp came from this [Cute Wallpaper](https://cutewallpaper.org/21/wallpaper-mangekyou-sharingan-gif/Top-30-Sharingan-GIFs-Find-the-best-GIF-on-Gfycat.gif)
+-   The Splash screen background image came from this [Wallpaper Abyss](https://wall.alphacoders.com/big.php?i=1093657)
+-   The Card images came from [Pinterest](https://www.pinterest.co.uk/)
+-   The Favicon icon came from [Icon Library](https://icon-library.com/icon/naruto-icon-13.html)
 
 ### Acknowledgements
+
+-   Inspired by OurCodeSolution (https://ourcodesolution.com/)
 
 -   My Mentor for continuous helpful feedback.
 
