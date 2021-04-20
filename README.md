@@ -55,7 +55,7 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
 *   ### Wireframes
 
-    -  Wireframe - [View](https://github.com/)
+    -  Wireframe - [View](./assets/images/wireframe.png)
 
    
 ## Features
