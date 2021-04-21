@@ -164,9 +164,9 @@ $(document).ready(function() {
   // Flip Container Click End //
 
   function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      let x = Math.floor(Math.random() * (i + 1));
-      let temp = array[i];
+    for (var i = array.length - 1; i > 0; i--) {
+      var x = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
       array[i] = array[x];
       array[x] = temp;
     }
@@ -176,10 +176,10 @@ $(document).ready(function() {
   function countdown() {
     startTimer = true;
 
-    let timeStart = +new Date();
-    let timer = setInterval(function () {
-      let timeNow = +new Date();
-      let startDiff = (timeNow - timeStart) / 1000;
+    var timeStart = +new Date();
+    var timer = setInterval(function () {
+      var timeNow = +new Date();
+      var startDiff = (timeNow - timeStart) / 1000;
 
       // Calculates time difference if game isn't in focus
 
