@@ -212,6 +212,19 @@ body header .timer {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .title-img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tutorial{
+    font-size: 15px;
+    line-height: 40px;
+  }
+}
+
 @media screen and (max-width: 37.4375em) {
   .tutor {
     font-size: 15px;
