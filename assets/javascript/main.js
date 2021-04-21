@@ -97,7 +97,7 @@ $(document).ready(function () {
             Swal.fire({
               title: "YATTAA!",
               text: "You have released the Genjustu... your memories have been restored... " + "Optional: Try playing again, but this time try matching the cards without memorising where they are",
-              imageUrl: "./assets/images/victory.gif",
+              imageUrl: "https://user-images.githubusercontent.com/41737293/115560372-6e16e180-a2ac-11eb-989b-a643be8402f6.gif",
               imageWidth: 400,
               imageHeight: 200,
               imageAlt: "Custom image",
