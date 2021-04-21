@@ -12,17 +12,17 @@ $(document).ready(function() {
 
   /* ___________________________ Variable assignment */
 
-  let cards = ["Gamakichi", "Konoha", "Ramen", "Seal", "Sharingan", "Smile", "Uchiha", "Sasuke"];
-  let cardPair = cards.concat(cards);
-  let cardSelect = [];
-  let flipCards = [];
-  let pairCount = 0;
-  let startGame = false;
-  let playing = false;
-  let timeGiven = 30;
-  let timeOut = false;
-  let victoryRoyale = false;
-  let startTimer = false;
+  var cards = ["Gamakichi", "Konoha", "Ramen", "Seal", "Sharingan", "Smile", "Uchiha", "Sasuke"];
+  var cardPair = cards.concat(cards);
+  var cardSelect = [];
+  var flipCards = [];
+  var pairCount = 0;
+  var startGame = false;
+  var playing = false;
+  var timeGiven = 30;
+  var timeOut = false;
+  var victoryRoyale = false;
+  var startTimer = false;
 
   // Shuffle cards //
 
