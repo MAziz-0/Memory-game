@@ -4,7 +4,7 @@
 
 I have created a Memory card game with a fanfare twist. I've meshed a great card game with one of my favourites animations to create Naruto Memories. A plot filled card matching game that pays homage to the great show called Naruto. As a fan, it has been a pleasure to bring my study and love of animation together. I hope you enjoy it.
 
-<h2 align="center"><img src="./assets/images/mockup.JPG"></h2>
+<h2 align="center"><img src="https://user-images.githubusercontent.com/41737293/115557943-1f684800-a2aa-11eb-9930-e8ef156e19e5.JPG"></h2>
 
 
 ## How to Play
