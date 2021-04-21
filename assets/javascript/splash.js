@@ -1,12 +1,12 @@
 
 /* ____________________________Presents tiu Splashscreen*/
 
-var splash = document.querySelector(".splash");
-var title = document.querySelector(".title-container");
-var timer = document.querySelector(".timer-container");
-var game = document.querySelector(".game");
-var body = document.querySelector(".game-body");
-var countdown = document.querySelector(".timer");
+let splash = document.querySelector(".splash");
+let title = document.querySelector(".title-container");
+let timer = document.querySelector(".timer-container");
+let game = document.querySelector(".game");
+let body = document.querySelector(".game-body");
+let countdown = document.querySelector(".timer");
 /* ____________________________Removes hidden classes from main game after set amount of time */
 document.addEventListener("DOMContentLoaded",(_e)=>{
     setTimeout(()=>{
