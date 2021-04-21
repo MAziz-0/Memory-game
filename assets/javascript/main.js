@@ -3,7 +3,7 @@ if (document.location.search.match(/type=embed/gi)) {
 }
 
 /* ____________________________Responsiveness on Safari/Chrome */
-let $;
+var $;
 
 $(document).ready(function() {
   if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
