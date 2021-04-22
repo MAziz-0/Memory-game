@@ -107,17 +107,26 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         2. There is a brief tutorial text which tells the user how to play; not much detail is needed as the game is intuitive enough to pick up without instructions.
         3. The splash screen has an appropriate timeout feature which gave me enough time to read the content and tutorial.
 
+    Screenshot  [View](https://user-images.githubusercontent.com/41737293/115718602-2c9d3980-a373-11eb-9bb3-32d5bd027e2d.JPG)
+
     2. As a First Time Visitor, I want to play the game as intended for it to function.
 
         1. Each component of the website is straightforward and structured, separated by a splash screen, the main game and finally, a victory or loss alert.
         2. The timeout features are functional, the cards flips are fluid, and the timer works correctly.
+
+    Screenshot  [View](https://user-images.githubusercontent.com/41737293/115718905-7d149700-a373-11eb-8f1b-294b13ca5ae6.JPG)
+
         3. There is an option to "Play again" when winning and "Try again" when losing; GIFs are also used to emphasise the win/loss.
+
+    Screenshot  [View](https://user-images.githubusercontent.com/41737293/115719038-9f0e1980-a373-11eb-95d2-2fdb8d038d1c.JPG)
 
     3. As a First Time Visitor, I want to learn more about the developer.
 
         1. Once the new visitor has won the game or lost the game; there is a link to the developer's portfolio.
         2. Developer links are not as crucial and should not take away from experience; therefore, they are presented once the game session has ended.
-        
+
+    Screenshot  [View](https://user-images.githubusercontent.com/41737293/115719349-e8f6ff80-a373-11eb-8918-b25f59a16c7d.JPG)
+   
 
 -   #### Returning Visitor Goals
 
@@ -127,10 +136,16 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         2. The use of a 30-second timer makes the game fast and exhilarating, which allows for replayability.
         3. A suggestion is made at the end of the game to give more reasons for the player to challenge themself.
 
+    Screenshot  [View](https://user-images.githubusercontent.com/41737293/115719716-468b4c00-a374-11eb-8bb5-55e415c44ef4.JPG)
+
     2. As a Returning Visitor, I want to find the best way to find out more about the developer.
 
         1. A link to the developer's portfolio is readily available whether the game is won or lost.
         2. The portfolio gives a base introduction and provides information on the developer's skillset and links to all socials.
+
+    Screenshot  [View](https://user-images.githubusercontent.com/41737293/115719947-7cc8cb80-a374-11eb-9842-7ca831a43f6f.JPG)
+
+
 
 
 -   #### Frequent User Goals
@@ -160,6 +175,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   On some mobile devices, the title image does not fit correctly, and the cards are cut off if the screen size is too small.
     -   If the screen is too small, the "click to start" is pushed into the title image
 -   On Microsoft Edge and Internet Explorer Browsers and some phones, the .gif/.webp format does not display correctly.
+    - Unable to get HTML5 Audio or iframe working correctly on mobile devices, only works after game is restarted using the Try again/Play again alert.
 
 ### GitHub Pages
 
