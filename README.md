@@ -243,7 +243,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 ### Acknowledgements
 
--   Inspired by OurCodeSolution (https://ourcodesolution.com/)
+-   Javascript logic inspired by OurCodeSolution (https://ourcodesolution.com/)
 
 -   My Mentor for continuous helpful feedback.
 
