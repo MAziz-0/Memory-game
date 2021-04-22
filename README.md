@@ -88,7 +88,7 @@ I have created a Memory card game with a fanfare twist. I've meshed a great card
 1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
     - Photoshop was used to edit the background hero image.
 1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
+    - Balsamiq was used to create the [wireframes](https://user-images.githubusercontent.com/41737293/115411820-b91cf000-a1eb-11eb-8c64-47ec6c2f3150.png) during the design process.
 
 ## Testing
 
